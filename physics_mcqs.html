@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Class 12 Physics – Practice Board MCQs</title>
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #fff;
+  --fg: #1c1c1e;
+  --mut: #6b7280;
+  --card: #f3f5f9;
+  --acc: #1a3a5c;
+  --btn: #1a3a5c;
+  --btnfg: #fff;
+  --ok: #2e7d32;
+  --okbg: #e3f4e5;
+  --bd: #d9dee7;
+  --tag: #e0e7ff;
+  --tagfg: #3730a3;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #16181d;
+    --fg: #eceef2;
+    --mut: #9aa3b2;
+    --card: #22262e;
+    --acc: #8ab4f8;
+    --btn: #8ab4f8;
+    --btnfg: #10151d;
+    --ok: #7bd88a;
+    --okbg: #1f3a27;
+    --bd: #363c48;
+    --tag: #2a334f;
+    --tagfg: #adc6ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.45;
+  padding: 0 14px 40px;
+  max-width: 760px;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1 { font-size: 1.25rem; color: var(--acc); margin: 16px 0 2px; }
+.sub { color: var(--mut); font-size: 0.85rem; margin-bottom: 12px; }
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  padding: 10px 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--bd);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+select {
+  font: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--bd);
+  background: var(--card);
+  color: var(--fg);
+  outline: none;
+}
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 8px;
+  background: var(--btn);
+  color: var(--btnfg);
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.sm { font-size: 0.85rem; padding: 6px 12px; }
+a.nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--btnfg);
+  background: var(--acc);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-left: auto;
+}
+section { background: var(--card); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
+h2 { font-size: 1.05rem; color: var(--acc); margin: 0 0 10px; border-bottom: 1px dashed var(--bd); padding-bottom: 6px; }
+.q { margin: 14px 0; word-break: break-word; }
+.tag { font-size: 0.75rem; background: var(--tag); color: var(--tagfg); padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 6px; display: inline-block; }
+.o { padding: 6px 10px; border-radius: 6px; margin: 3px 0; font-size: 0.95rem; width: 100%; text-align: left; }
+.show .o.c { background: var(--okbg); color: var(--ok); font-weight: 700; }
+.ans { display: none; color: var(--ok); font-weight: 700; font-size: 0.9rem; margin: 10px 0 6px; }
+.show .ans { display: block; }
+</style>
+</head>
+<body>
+
+<h1>Class 12 Physics – Practice Board MCQs</h1>
+<div class="sub">Maharashtra State Board · Complete Chapterwise Past Years MCQs</div>
+
+<div class="bar"> <label for="chSel" style="font-size:0.85rem; font-weight:600; color:var(--mut);">Chapter:</label>
+  <select id="chSel">
+    <option value="all">All Chapters</option>
+  </select>
+  <button id="all" class="sm">Show all answers</button>
+
+  <a href="physics_quiz.html" class="nav-link">Take the Physics Quiz →</a>
+</div>
+
+<div id="app"></div>
+
+<script>
+var DATA = [
+  ["01. Rotational Dynamics", [
+    ["A car is moving along a horizontal curve of radius 20 m and coefficient of friction between the road and wheels of the car is 0.25. If acceleration due to gravity is 9.8 m/s², then its maximum speed is <span class=\"tag\">Mar '08</span>", ["3 m/s", "5 m/s", "7 m/s", "9 m/s"], 2],
+    ["A body is acted upon by a constant torque. In 4 seconds its angular momentum changes from L to 4L. The magnitude of the torque is <span class=\"tag\">Mar '09</span>", ["L/4", "3L/4", "3L", "12L"], 1],
+    ["Radius of gyration of a ring about a transverse axis passing through its centre is <span class=\"tag\">Oct '08</span>", ["0.5 × diameter of ring", "diameter of ring", "2 × diameter of ring", "(diameter of ring)²"], 0],
+    ["A stone is tied to a string and rotated in a horizontal circle with constant angular velocity. If the string is released, the stone flies <span class=\"tag\">Oct '09, Mar '10</span>", ["radially inward", "radially outward", "tangentially forward", "tangentially backward"], 2],
+    ["The radius of gyration of a solid sphere of mass M and radius R rotating about an axis with its diameter N is <span class=\"tag\">Mar '10</span>", ["√(1/5) R", "√(2/5) R", "√(3/5) R", "√(7/5) R"], 1],
+    ["The moment of inertia of a thin uniform rod of mass M and length L, about an axis passing through a point, midway between the centre and one end, perpendicular to its length is <span class=\"tag\">Mar '13</span>", ["(48/7) ML²", "(7/48) ML²", "(1/48) ML²", "(1/16) ML²"], 1],
+    ["If 'L' is the angular momentum and 'I' is the moment of inertia of a rotating body, then L² / 2I represents its <span class=\"tag\">Oct '13</span>", ["rotational P.E.", "total energy", "rotational K.E.", "translational K.E."], 2],
+    ["A thin wire of length L and uniform linear mass density ρ is bent into a circular coil. Moment of inertia of the coil about tangential axis in its plane is <span class=\"tag\">Oct '14</span>", ["3ρL³ / 8π²", "3ρL³ / 8π", "3ρL³ / 8π²", "3ρL³ / 8π"], 0],
+    ["The kinetic energy of a rotating body depends upon <span class=\"tag\">Mar '15</span>", ["distribution of mass only.", "angular speed only.", "distribution of mass and angular speed.", "angular acceleration only."], 2],
+    ["A particle rotates in U.C.M. with tangential velocity 'v' along a horizontal circle of diameter 'D'. Total angular displacement of the particle in time 't' is <span class=\"tag\">Mar '16</span>", ["vt", "vt / 2D", "v / D t", "2vt / D"], 3],
+    ["A body of moment of inertia 5 kg m² rotating with an angular velocity 6 rad/s has the same kinetic energy as a mass of 20 kg moving with a velocity of <span class=\"tag\">Mar '16</span>", ["5 m/s", "4 m/s", "3 m/s", "2 m/s"], 2],
+    ["The difference in tensions in the string at lowest and highest points in the path of the particle of mass 'm' performing vertical circular motion is <span class=\"tag\">July '16</span>", ["2 mg", "4 mg", "6 mg", "8 mg"], 2],
+    ["The body is rotating with uniform angular velocity (ω) having rotational kinetic energy (E). Its angular momentum (L) is: <span class=\"tag\">July '16</span>", ["2E / ω", "E² / ω", "E / ω", "E / 2ω"], 0],
+    ["When the angular acceleration of a rotating body is zero, which physical quantity will be equal to zero? <span class=\"tag\">Mar '17</span>", ["Angular momentum", "Moment of inertia", "Torque", "Radius of gyration"], 2],
+    ["A body of mass 'm' performs uniform circular motion along a circular path of radius 'r' with velocity 'v'. If its angular momentum is L, then the centripetal force acting on it is <span class=\"tag\">July '17</span>", ["mL² / r³", "L² / mr", "L² / mr³", "L² / mr²"], 2],
+    ["If a rigid body of radius 'R' starts from rest and rolls down an inclined plane of inclination 'θ', then linear acceleration of body rolling down the plane is <span class=\"tag\">July '17</span>", ["g sinθ / (1 + K/R)", "g sinθ / (1 + K/R)", "g sinθ / (1 + K²/R²)", "g sinθ (1 + K²/R²)"], 2],
+    ["A particle of mass m performs vertical motion in a circle of radius r. Its potential energy at the highest point is (g is acceleration due to gravity) <span class=\"tag\">Mar '18</span>", ["2 mgr", "mgr", "0", "3 mgr"], 0],
+    ["A thin ring has mass 0.25 kg and radius 0.5 m. Its moment of inertia about an axis passing through its centre and perpendicular to its plane is <span class=\"tag\">Mar '18</span>", ["0.0625 kg m²", "0.625 kg m²", "6.25 kg m²", "62.5 kg m²"], 0],
+    ["The dimensions of angular momentum are <span class=\"tag\">Mar '08, July '18</span>", ["[L⁻² M¹ T⁻¹]", "[L² M¹ T⁻¹]", "[L¹ M² T¹]", "[L² M² T⁻²]"], 1],
+    ["In rotational motion of a rigid body, all particles move with <span class=\"tag\">Feb '20</span>", ["same linear velocity and same angular velocity", "same linear velocity and different angular velocity", "different linear velocities and same angular velocities", "different linear velocities and different angular velocities"], 2],
+    ["When the bob performs a vertical circular motion and the string rotates in a vertical plane, the difference in the tension in the string at horizontal position and uppermost position is <span class=\"tag\">Mar '22</span>", ["mg", "2mg", "3mg", "6mg"], 2],
+    ["A body performing uniform circular motion has constant <span class=\"tag\">July '23</span>", ["velocity", "kinetic energy", "displacement", "acceleration"], 1],
+    ["The moment of inertia (MI) of a disc of radius R and mass M about its central axis is <span class=\"tag\">Feb '24</span>", ["MR² / 4", "MR² / 2", "MR²", "3MR² / 2"], 1],
+    ["The power rating of a ceiling fan rotating with a constant torque of 2 Nm with an angular speed of 2π rad/s will be <span class=\"tag\">Feb '25</span>", ["π W", "2π W", "3π W", "4π W"], 3],
+    ["For which of the following bodies, the principle of perpendicular axes is applicable? <span class=\"tag\">June '25</span>", ["Spherical", "Conical", "Cylindrical", "Laminar"], 3],
+    ["The period of conical pendulum in terms of its length (l), semi-vertical angle (θ) and acceleration due to gravity (g) is <span class=\"tag\">Mar '15, Feb '26</span>", ["(1/2π) √(l cosθ / g)", "(1/2π) √(l sinθ / g)", "4π √(l cosθ / 4g)", "4π √(l tanθ / g)"], 0]
+  ]],
+  ["02. Mechanical Properties of Fluids", [
+    ["Absorption of water by filter paper is due to <span class=\"tag\">Mar '09</span>", ["cohesion", "capillarity", "adhesion", "elasticity"], 1],
+    ["'n' droplets of equal size of radius r coalesce to form a bigger drop of radius R. The energy liberated is equal to (T = Surface tension of water) <span class=\"tag\">Mar '13</span>", ["4πR²T [n¹/³ - 1]", "4πr²T [n¹/³ - 1]", "4πR²T [n²³ - 1]", "4πr²T [n²³ - 1]"], 0],
+    ["A big drop of radius R is formed from 1000 droplets of water. The radius of a droplet will be <span class=\"tag\">Oct '13</span>", ["10 R", "R / 10", "R / 100", "R / 1000"], 1],
+    ["In which of the following substances, surface tension increases with increase in temperature? <span class=\"tag\">Oct '14</span>", ["Copper", "Molten copper", "Iron", "Molten iron"], 1],
+    ["Angle of contact for the pair of pure water with clean glass is <span class=\"tag\">Oct '15</span>", ["acute", "obtuse", "90°", "0°"], 3],
+    ["If two capillary tubes of different diameters are partially dipped in the same liquid vertically, then the rise of liquid <span class=\"tag\">July '16</span>", ["is same in both the tubes.", "is more in the tube of larger diameter.", "will not be in smaller diameter tube.", "is more in the tube of smaller diameter."], 3],
+    ["1000 tiny mercury droplets coalesce to form a bigger drop. In this process, temperature of the drop <span class=\"tag\">July '17</span>", ["increases", "may increase or decrease", "decreases", "does not change"], 0],
+    ["A rectangular film of a liquid is 5 cm long and 4 cm wide. If the work done in increasing its area to 7 cm × 5 cm is 0.06 J, the surface tension of the solution is: <span class=\"tag\">July '18</span>", ["0.02 J/m²", "0.2 J/m²", "2 J/m²", "20 J/m²"], 3],
+    ["When a sparingly soluble substance like alcohol is dissolved in water, surface tension of water <span class=\"tag\">Mar '19</span>", ["increases", "decreases", "remains constant", "becomes infinite"], 1],
+    ["Two droplets coalesce in a single drop. In this process <span class=\"tag\">Feb '20</span>", ["energy is liberated", "energy is absorbed", "energy does not change", "some mass is converted into energy"], 0],
+    ["A liquid rises in glass capillary tube upto a height of 2.5 cm at room temperature. If another glass capillary tube having radius half that of the earlier tube is immersed in the same liquid, the rise of liquid in it will be <span class=\"tag\">Mar '22</span>", ["1.25 cm", "2.5 cm", "5 cm", "10 cm"], 2],
+    ["Raindrops are spherical in shape because of <span class=\"tag\">July '22</span>", ["surface tension", "capillarity", "downward motion", "acceleration due to gravity"], 0],
+    ["If 'θ' represents the angle of contact made by a liquid which completely wets the surface of the container then <span class=\"tag\">Feb '23</span>", ["θ = 0", "0 < θ < π/2", "θ = π/2", "π/2 < θ < π"], 0],
+    ["When soluble substance such as common salt (i.e. sodium chloride) is dissolved in water, surface tension of water <span class=\"tag\">July '23</span>", ["decreases", "becomes zero", "remains the same", "increases"], 3],
+    ["The dimensional formula of surface tension is <span class=\"tag\">Feb '24</span>", ["[L⁻¹ M¹ T⁻²]", "[L² M¹ T⁻²]", "[L¹ M¹ T⁻¹]", "[L⁰ M¹ T⁻²]"], 3],
+    ["The molecules on the surface of liquid have <span class=\"tag\">July '24</span>", ["minimum kinetic energy.", "minimum potential energy.", "maximum kinetic energy.", "maximum potential energy."], 3],
+    ["In Bernoulli's theorem, which of the following is constant? <span class=\"tag\">Feb '25</span>", ["Linear momentum", "Angular momentum", "Mass", "Energy"], 3],
+    ["Two capillary tubes of radii 0.3 cm and 0.6 cm are dipped in the same liquid, the ratio of heights to which the liquid will rise in the tubes is <span class=\"tag\">June '25</span>", ["1:2", "2:1", "1:4", "4:1"], 1],
+    ["When a number of droplets coalesce to form a single drop, the total surface area of the drop <span class=\"tag\">Feb '26</span>", ["decreases", "becomes zero", "remains same", "increases"], 0]
+  ]],
+  ["03. Kinetic Theory of Gases and Radiation", [
+    ["The average distance covered by a molecule between two successive collision is <span class=\"tag\">Mar '09</span>", ["free path", "constant path", "mean free path", "free path per unit time"], 2],
+    ["The amount of energy radiated per second by a body does not depend upon <span class=\"tag\">Oct '09</span>", ["nature of surface", "area of surface", "mass of the body", "temperature difference of the surface and surroundings"], 2],
+    ["The SI unit of emissive power is <span class=\"tag\">Mar '10</span>", ["watt/m²", "watt.m²", "watt/m².K", "watt.m²/K"], 0],
+    ["The r.m.s. velocity of the molecules moving with velocities 2 m/s, 4 m/s and 6 m/s is <span class=\"tag\">Oct '09, Mar '12</span>", ["2.8 m/s", "3 m/s", "3.8 m/s", "4.33 m/s"], 3],
+    ["The light from the Sun is found to have a maximum intensity near the wavelength of 470 nm. Assuming the surface of the Sun as a black body, the temperature of the Sun is _____ (Wien's constant (b) = 2.898 × 10⁻³ mK) <span class=\"tag\">Mar '13</span>", ["5800 K", "6050 K", "6166 K", "6500 K"], 2],
+    ["The substance which allows heat radiations to pass through is <span class=\"tag\">Oct '13</span>", ["iron", "water vapour", "wood", "dry air"], 3],
+    ["The co-efficient of reflection of an opaque body is 0.16. Its co-efficient of emission is <span class=\"tag\">Oct '14</span>", ["0.94", "0.84", "0.74", "0.64"], 1],
+    ["Two copper spheres of radii 6 cm and 12 cm respectively are suspended in an evacuated enclosure. Each of them are at a temperature 15 °C above the surroundings. The ratio of their rate of loss of heat is <span class=\"tag\">Mar '15</span>", ["1:2", "1:4", "1:8", "8:1"], 1],
+    ["The pressure (P) of an ideal gas having volume (V) is 2E/3V, then the energy E is <span class=\"tag\">Oct '15</span>", ["translational kinetic", "rotational kinetic", "vibrational kinetic", "inversely proportional to pressure"], 0],
+    ["The dimensions of emissive power are <span class=\"tag\">Oct '15</span>", ["[M¹ L⁻² T⁻³]", "[M¹ L² T⁻³]", "[M¹ L⁰ T⁻³]", "[M¹ L⁰ T⁻²]"], 2],
+    ["For polyatomic molecules having 'f' vibrational modes, the ratio of two specific heats, Cp/Cv is <span class=\"tag\">Mar '16</span>", ["(1 + f) / (2 + f)", "(2 + f) / (3 + f)", "(4 + f) / (3 + f)", "(5 + f) / (4 + f)"], 2],
+    ["Two gases exert pressure in the ratio 3:2 and their densities are in the ratio 2:3, then the ratio of their R.M.S. velocities is <span class=\"tag\">July '16</span>", ["2:3", "3:2", "2:1", "1:2"], 1],
+    ["If the pressure of an ideal gas decreases by 10% isothermally, then its volume will <span class=\"tag\">Mar '17</span>", ["decrease by 9%", "increase by 7%", "increase by 10%", "increase by 11.4%"], 3],
+    ["Find the wavelength at which a black body radiates maximum energy, if its temperature is 427 °C. (Wien's constant (b) = 2.898 × 10⁻³ mK) <span class=\"tag\">Mar '17</span>", ["0.0414 × 10⁻⁶ m", "4.14 × 10⁻⁶ m", "41.4 × 10⁻⁶ m", "414 × 10⁻⁶ m"], 1],
+    ["If the total kinetic energy per unit volume of gas enclosed in a container is E, the pressure exerted by the gas is <span class=\"tag\">July '17</span>", ["E", "(2/3) E", "√3 E", "(3/2) E"], 1],
+    ["The kinetic energy per molecule of a gas at temperature T is <span class=\"tag\">Mar '18</span>", ["(3/2) RT", "(3/2) K_B T", "(2/3) RT", "(3/2) (RT/M)"], 1],
+    ["The number of degrees of freedom for a rigid diatomic molecule is <span class=\"tag\">Mar '13, July '18</span>", ["3", "5", "6", "7"], 1],
+    ["The specific heat capacity of water is <span class=\"tag\">Mar '19</span>", ["8R", "(8/9) R", "9R", "(9/7) R"], 2],
+    ["If the kinetic energy of hydrogen is 151.91 J at the pressure of 1 atmosphere, then its volume is <span class=\"tag\">July '19</span>", ["3 litre", "2 litre", "1 litre", "0.5 litre"], 1],
+    ["The root mean square speed of the molecules of a gas is proportional to (T = Absolute temperature of gas) <span class=\"tag\">Mar '22</span>", ["√T", "T", "1/C", "1/√T"], 0],
+    ["The average K.E. of a gas is <span class=\"tag\">July '22</span>", ["directly proportional to absolute temperature of gas", "directly proportional to square of absolute temperature of gas", "directly proportional to square root of absolute temperature of gas", "inversely proportional to absolute temperature of gas"], 0],
+    ["If 'n' is the number of molecules per unit volume and 'd' is the diameter of the molecules, the mean free path 'λ' of molecules is <span class=\"tag\">Feb '23</span>", ["1 / (√2 π n d²)", "1 / (2 π n d²)", "1 / (√2 π n d)", "1 / (√2 π n d)"], 0],
+    ["The coefficient of absorption of a body is equal to its coefficient of emission at a given temperature is called <span class=\"tag\">July '23</span>", ["Stefan's law", "Newton's law of cooling", "Kirchhoff's law of heat radiation", "Boyle's law"], 2],
+    ["If coefficient of emission is 'e' for a perfectly black body and coefficient of transmission is 't' then <span class=\"tag\">July '24</span>", ["e = 0, t = 1", "e = 1, t = 1", "e = 0, t = 0", "e = 1, t = 0"], 3],
+    ["The ratio of emissive power of a perfect black body at 927 °C and 327 °C is <span class=\"tag\">July '24</span>", ["2:1", "4:1", "8:1", "16:1"], 3],
+    ["Which of the following materials belongs to diathermanous substance? <span class=\"tag\">Feb '25</span>", ["wood", "iron", "glass", "copper"], 2],
+    ["If pressure of gas contained in a closed vessel is increased by 0.4% when heated by 1°C, its initial temperature must be <span class=\"tag\">June '25</span>", ["200 °C", "250 °C", "300 °C", "350 °C"], 1],
+    ["In an ideal gas, molecules possess <span class=\"tag\">Feb '26</span>", ["only kinetic energy", "both kinetic energy and potential energy", "only potential energy", "neither kinetic energy nor potential energy"], 0]
+  ]],
+  ["04. Thermodynamics", [
+    ["A graph of pressure versus volume for an ideal gas for different processes is as shown. In the graph curve OA represents <span class=\"tag\">July '22</span>", ["isochoric process", "isothermal process", "isobaric process", "adiabatic process"], 2],
+    ["The first law of thermodynamics is consistent with the law of conservation of <span class=\"tag\">Feb '23</span>", ["momentum", "energy", "mass", "velocity"], 1],
+    ["The second law of thermodynamics deals with the transfer of _____ <span class=\"tag\">July '23</span>", ["work done", "energy", "pressure", "heat"], 3],
+    ["In a cyclic process, if ΔU = internal energy, W = work done, Q = Heat supplied then <span class=\"tag\">Feb '24</span>", ["ΔU = Q", "Q = 0", "W = 0", "W = Q"], 3],
+    ["\"If two systems are each in thermal equilibrium with a third system, they are also in thermal equilibrium with each other.\" This statement refers to: <span class=\"tag\">Feb '25</span>", ["zeroth law of thermodynamics", "first law of thermodynamics", "second law of thermodynamics", "Carnot's law"], 0],
+    ["The process in which heat is neither absorbed nor released by a system is called _____ <span class=\"tag\">Feb '26</span>", ["isobaric", "isochoric", "isothermal", "adiabatic"], 3]
+  ]],
+  ["05. Oscillations", [
+    ["The total work done by a restoring force in simple harmonic motion of amplitude A and angular speed ω, in one oscillation is <span class=\"tag\">Mar '08</span>", ["(1/2) m A² ω²", "zero", "m A² ω²", "(1/2) m A ω"], 1],
+    ["An amplitude of a simple pendulum of a period T and length L is increased by 5%. The new period of that pendulum will be <span class=\"tag\">Mar '09</span>", ["T / 8", "T / 4", "T / 2", "T"], 3],
+    ["The motion of a simple pendulum is <span class=\"tag\">Oct '09</span>", ["oscillatory but not periodic", "periodic but not oscillatory", "neither periodic nor oscillatory", "periodic as well as oscillatory"], 3],
+    ["The maximum velocity of a particle performing linear S.H.M. is 0.32 m/s and its maximum acceleration is 2.56 m/s², the amplitude of S.H.M. is <span class=\"tag\">Mar '10</span>", ["0.02 m", "0.03 m", "0.04 m", "0.05 m"], 2],
+    ["Two particles perform linear simple harmonic motion along the same path of length 2A and period T. The phase difference between them is <span class=\"tag\">Mar '13</span>", ["zero rad", "π/4 rad", "π/2 rad", "3π/4 rad"], 2],
+    ["A particle executing linear S.H.M. has velocities v₁ and v₂ at distances x₁ and x₂ respectively from the mean position. The angular velocity of the particle is <span class=\"tag\">Oct '13</span>", ["√[(x₁² - x₂²) / (v₂² - v₁²)]", "√[(v₁² - v₂²) / (x₂² - x₁²)]", "√[(x₁² + x₂²) / (v₂² + v₁²)]", "√[(v₂² + v₁²) / (x₂² + x₁²)]"], 1],
+    ["The phase difference between displacement and acceleration of a particle performing S.H.M. is <span class=\"tag\">Mar '14</span>", ["π/2 rad", "π rad", "2π rad", "3π/2 rad"], 1],
+    ["The average displacement over a period of S.H.M. is (A = amplitude of S.H.M.) <span class=\"tag\">Oct '14</span>", ["0", "A", "2A", "4A"], 0],
+    ["If the metal bob of a simple pendulum is replaced by a wooden bob of the same size, then its time period will <span class=\"tag\">Mar '15</span>", ["increase", "remain same", "decrease", "first increase and then decrease"], 1],
+    ["A seconds pendulum is suspended in an elevator moving with constant speed in downward direction. The periodic time (T) of that pendulum is <span class=\"tag\">Oct '15</span>", ["less than two seconds", "equal to two seconds", "greater than two seconds", "very much greater than two seconds"], 1],
+    ["Two springs of force constants K₁ and K₂ (K₁ > K₂) are stretched by same force. If W₁ and W₂ be the work done stretching the springs then <span class=\"tag\">Mar '16</span>", ["W₁ = W₂", "W₁ < W₂", "W₁ > W₂", "W₁ - W₂ = 0"], 1],
+    ["In a damped harmonic oscillator, periodic oscillations have _________ amplitude. <span class=\"tag\">Mar '17</span>", ["gradually increasing", "suddenly increasing", "suddenly decreasing", "gradually decreasing"], 3],
+    ["If the particle starts its motion from mean position, the phase difference between displacement and acceleration is <span class=\"tag\">Mar '18</span>", ["2π rad", "π rad", "π/2 rad", "π/4 rad"], 1],
+    ["In simple harmonic motion, acceleration of the particle is zero, when its _________ <span class=\"tag\">Oct '08, July '18</span>", ["velocity is zero", "displacement is zero", "both velocity and displacement are zero", "both velocity and displacement are maximum"], 1],
+    ["The equation of a simple harmonic progressive wave travelling on a string is y = 8 sin (0.02 x - 4 t) cm. The speed of the wave is <span class=\"tag\">Mar '22</span>", ["10 cm/s", "20 cm/s", "100 cm/s", "200 cm/s"], 3],
+    ["A simple harmonic oscillator has amplitude 16 cm and period 4 seconds. The interval of time required by it to travel from x = 16 cm to x = 8 cm is <span class=\"tag\">July '22</span>", ["(1/2) second", "(2/3) second", "(5/6) second", "(4/3) second"], 1],
+    ["Periodic time of angular oscillations of a bar magnet is proportional to the _________ <span class=\"tag\">July '23</span>", ["ratio of moment of inertia and magnetic field", "ratio of magnetic field and moment of inertia", "square root of the ratio of moment of inertia and magnetic field", "square root of the ratio of magnetic field and moment of inertia"], 2],
+    ["A body performing linear S.H.M. experiences a force of 0.2 N when displaced through 4 cm from the mean position. Its force constant will be <span class=\"tag\">July '23</span>", ["2 N/m", "2.5 N/m", "5 N/m", "8 N/m"], 2],
+    ["The velocity of bob of a second's pendulum when it is 6 cm from its mean position and amplitude of 10 cm, is <span class=\"tag\">Feb '24</span>", ["8π cm/s", "6π cm/s", "4π cm/s", "2π cm/s"], 0],
+    ["A particle is subjected to two parallel S.H.M.s such that x = 2 sin ωt and y = 2 sin (ωt + π/3). The amplitude of the resultant S.H.M. will be <span class=\"tag\">Feb '26</span>", ["0", "2√3", "4", "12"], 1]
+  ]],
+  ["06. Superposition of Waves", [
+    ["In reflection of sound waves from rarer medium, there is phase change of <span class=\"tag\">Mar '08</span>", ["0 rad", "π/4 rad", "π/2 rad", "π rad"], 0],
+    ["In open organ pipe, first overtone produced is of such frequency that length of the pipe is equal to <span class=\"tag\">Oct '08</span>", ["λ/4", "λ/3", "λ/2", "λ"], 3],
+    ["In the equation of a simple harmonic progressive wave of wavelength 'λ', the propagation constant is given by <span class=\"tag\">Mar '09</span>", ["2π / λ", "π λ", "π / λ", "λ / 2π"], 0],
+    ["A stretched string of length l vibrates in third overtone, the wavelength of stationary wave formed is <span class=\"tag\">Oct '09</span>", ["l / 2", "l / 4", "l", "2l"], 0],
+    ["In a simple harmonic progressive wave of amplitude 10 cm, the maximum particle velocity is two times its wave velocity, then the wavelength of the wave is <span class=\"tag\">Oct '09</span>", ["3.14 cm", "15.7 cm", "31.4 cm", "157 cm"], 2],
+    ["For two vibrating bodies to be in resonance, which of the following quantity should be equal? <span class=\"tag\">Mar '10</span>", ["Wavelength", "Frequency", "Amplitude", "Wave velocity"], 1],
+    ["One beat means that the intensity of sound should be <span class=\"tag\">Mar '10</span>", ["once maximum", "once minimum", "once maximum and once minimum", "twice maximum and twice minimum"], 2],
+    ["When a transverse wave on a string is reflected from the free end, the phase change produced is <span class=\"tag\">Mar '13</span>", ["zero rad", "π/2 rad", "3π/4 rad", "π rad"], 0],
+    ["Let n₁ and n₂ be the two slightly different frequencies of two sound waves. The time interval between waxing and immediate next waning is <span class=\"tag\">Mar '14</span>", ["1 / (n₁ - n₂)", "2 / (n₁ - n₂)", "1 / 2(n₁ - n₂)", "2(n₁ - n₂)"], 2],
+    ["A pipe open at both ends resonates to a frequency 'n₁' and a pipe closed at one end resonates to a frequency 'n₂'. If they are joined to form a pipe closed at one end, then the fundamental frequency will be <span class=\"tag\">Mar '14</span>", ["n₁ n₂ / (2n₂ + n₁)", "2n₁ n₂ / (2n₂ + n₁)", "2n₁ n₂ / (n₁ + n₂)", "(n₁ + 2n₂) / n₁ n₂"], 0],
+    ["Let velocity of a sound wave be 'v' and 'ω' be angular velocity. The propagation constant of the wave is <span class=\"tag\">Oct '14</span>", ["√(ω / v)", "√(v / ω)", "ω / v", "v / ω"], 2],
+    ["The value of end correction for an open organ pipe of radius 'r' is <span class=\"tag\">Oct '14</span>", ["0.3 r", "0.6 r", "0.9 r", "1.2 r"], 3],
+    ["When longitudinal wave is incident at the boundary of denser medium, then <span class=\"tag\">Mar '15</span>", ["compression reflects as a compression.", "compression reflects as a rarefaction.", "rarefaction reflects as a compression.", "longitudinal wave reflects as transverse wave."], 0],
+    ["The equation of a progressive wave is y = 7 sin (4t - 0.02x), where x and y are in cms and time t in seconds. The maximum velocity of a particle is <span class=\"tag\">Oct '15</span>", ["28 cm/s", "32 cm/s", "49 cm/s", "112 cm/s"], 0],
+    ["The fundamental frequency of transverse vibration of a stretched string of radius r is proportional to <span class=\"tag\">Oct '15</span>", ["r⁻²", "r⁻¹", "r³", "r²"], 1],
+    ["A sonometer wire vibrates with frequency n₁ in air under suitable load of specific gravity 'σ'. When the load is immersed in water, the frequency of vibration of wire n₂ will be <span class=\"tag\">Mar '16</span>", ["n₁ √[(σ + 1) / σ]", "n₁ √[(σ - 1) / σ]", "n₁ √[σ / (σ + 1)]", "n₁ √[σ / (σ - 1)]"], 1],
+    ["If sound waves are reflected from surface of denser medium, there is phase change of <span class=\"tag\">Mar '16</span>", ["0 rad", "π/4 rad", "π/2 rad", "π rad"], 3],
+    ["The working of RADAR is based on <span class=\"tag\">July '16</span>", ["resonance", "speed of a star", "Doppler effect", "speed of rotation of sun"], 2],
+    ["A sonometer wire vibrates with three nodes and two antinodes, the corresponding mode of vibration is <span class=\"tag\">July '16</span>", ["First overtone", "Second overtone", "Third overtone", "Fourth overtone"], 0],
+    ["A sine wave of wavelength 'λ' is travelling in a medium. What is the minimum distance between two particles of the medium which always have the same speed? <span class=\"tag\">Mar '17</span>", ["λ", "λ/2", "λ/3", "λ/4"], 1],
+    ["Velocity of transverse wave along a stretched string is proportional to _______ (T = tension in the string) <span class=\"tag\">Mar '17</span>", ["√T", "T", "1/√T", "1/T"], 0],
+    ["Doppler effect is not applicable when <span class=\"tag\">July '17</span>", ["source and observer are at rest.", "there is a relative motion between source and observer.", "both are moving in opposite directions.", "both are moving in same direction with different velocities."], 0],
+    ["In stationary wave, the distance between a node and its adjacent antinode is <span class=\"tag\">Mar '18</span>", ["λ", "λ/4", "λ/2", "2λ"], 1],
+    ["A wave is travelling in the negative direction of X-axis, then its equation is <span class=\"tag\">July '18</span>", ["y = a sin 2π(t/T - x/λ)", "y = a sin 2π n (t + x/v)", "y = a sin 2π(t/T + v/x)", "y = a sin (2π/T) (t + x/λ)"], 1],
+    ["If the longitudinal wave travelling in rarer medium, then is incident on the boundary of denser medium, then the phase of wave changes by <span class=\"tag\">July '19</span>", ["2π rad", "π rad", "π/2 rad", "π/4 rad"], 1],
+    ["A standing wave is produced on a string fixed at one end and free at other. The length of string must be an ________ <span class=\"tag\">Feb '20</span>", ["odd integral multiple of λ/4", "integral multiple of λ/2", "integral multiple of λ", "integral multiple of λ/4"], 0],
+    ["Two tuning forks have frequencies 450 Hz and 454 Hz respectively. On sounding these forks together, the time interval between two successive maximum intensities will be ________ <span class=\"tag\">Feb '20</span>", ["1/4 s", "1/2 s", "1 s", "4 s"], 0],
+    ["Standing waves are produced on a string fixed at both ends. In this case ________ <span class=\"tag\">July '22</span>", ["all particles vibrate in phase", "all antinodes vibrate in phase", "all alternate antinodes vibrate in phase", "all particles between two consecutive antinodes vibrate in phase"], 2],
+    ["Phase difference between a node and an adjacent antinode in a stationary wave is <span class=\"tag\">Feb '24</span>", ["π/4 rad", "π/2 rad", "3π/4 rad", "π rad"], 1],
+    ["When an air column in a pipe closed at one end vibrates such that two nodes are formed in it, the frequency of its vibration is ________ <span class=\"tag\">July '24</span>", ["two times the fundamental frequency", "three times the fundamental frequency", "four times the fundamental frequency", "five times the fundamental frequency"], 1],
+    ["A string of length 2 m is vibrating with 2 loops. The distance between its node and adjacent antinode is ________. <span class=\"tag\">Feb '25</span>", ["0.5 m", "1.0 m", "1.5 m", "2.0 m"], 0],
+    ["Which of the following equation represents a simple harmonic progressive wave travelling along the negative X-direction? <span class=\"tag\">June '25</span>", ["Y = a sin (kx - ωt)", "Y = a sin (kx + ωt)", "Y = a sin (ky - ωt)", "Y = a sin (ky + ωt)"], 1]
+  ]],
+  ["07. Wave Optics", [
+    ["Huygens' Wave Theory of light could not explain <span class=\"tag\">Mar '08</span>", ["reflection", "refraction", "interference", "Photoelectric effect"], 3],
+    ["In interference of light, a point is bright if the path difference between the two beams arriving at that point is <span class=\"tag\">Mar '08</span>", ["an integral multiple of the wavelength", "an odd multiple of half of the wavelength", "an odd multiple of the wavelength", "an even multiple of the wavelength"], 0],
+    ["In the biprism experiment keeping the experimental set up unchanged, the fringe width <span class=\"tag\">Oct '08</span>", ["increases with increase in wavelength.", "decreases with increase in wavelength.", "increases with decrease in wavelength.", "remains unchanged with change in wavelength."], 0],
+    ["A parallel beam of light traveling in glass is incident obliquely on water surface. After refraction, its width <span class=\"tag\">Mar '10</span>", ["decreases", "increases", "remains same", "becomes zero"], 1],
+    ["For destructive interference, the phase difference between two waves should be <span class=\"tag\">Mar '10</span>", ["0, π, 2π, ......", "0, 2π, 4π, ......", "π, 3π, 5π, ......", "π/4, 3π/2, 5π/4, ......"], 2],
+    ["In the diffraction pattern due to a single slit of width 'd' with incident light of wavelength 'λ', at an angle of diffraction 'θ', the condition for first minimum is <span class=\"tag\">Mar '13</span>", ["λ sin θ = d", "d cos θ = λ", "d sin θ = λ", "λ cos θ = d"], 2],
+    ["The fringes produced in diffraction pattern are of <span class=\"tag\">Oct '13</span>", ["equal width with same intensity", "unequal width with varying intensity", "equal width with varying intensity", "equal width with varying intensity"], 1],
+    ["A ray of light passes from vacuum to a medium of refractive index μ. Angle of incidence is found to be twice the angle of refraction. The angle of incidence is given by <span class=\"tag\">Oct '13</span>", ["cos⁻¹ (μ / 2)", "cos⁻¹ (μ)", "2 cos⁻¹ (μ / 2)", "2 sin⁻¹ (μ / 2)"], 2],
+    ["The resolving power of telescope of aperture 100 cm for light of wavelength 5.5 × 10⁻⁷ m is <span class=\"tag\">Mar '14</span>", ["0.149 × 10⁷", "1.49 × 10⁷", "14.9 × 10⁷", "149 × 10⁷"], 1],
+    ["If numerical aperture of a microscope is increased, then its <span class=\"tag\">Oct '14</span>", ["resolving power decreases.", "limit of resolution decreases.", "resolving power remains constant.", "limit of resolution increases."], 1],
+    ["The numerical aperture of objective of a microscope is 0.12. The limit of resolution, when light of wavelength 6000 Å is used to view an object is <span class=\"tag\">Mar '15</span>", ["0.25 × 10⁻⁷ m", "2.5 × 10⁻⁷ m", "25 × 10⁻⁷ m", "250 × 10⁻⁷ m"], 1],
+    ["Light of a certain wavelength has a wave number ν̄ in vacuum. Its wave number in a medium of refractive index n is <span class=\"tag\">Oct '15</span>", ["n / ν̄", "1 / nν̄", "ν̄ / n", "n ν̄"], 3],
+    ["If the polarizing angle for a given medium is 60°, then the refractive index of the medium is <span class=\"tag\">Oct '08, Mar '16</span>", ["1 / √3", "1", "√3 / 2", "√3"], 3],
+    ["The resolving power of a telescope depends upon the <span class=\"tag\">Mar '16</span>", ["length of the telescope", "focal length of an objective", "diameter of an objective", "focal length of an eyepiece"], 2],
+    ["A parallel beam of light travelling in water is incident obliquely on a glass surface. After refraction its width <span class=\"tag\">July '16</span>", ["decreases", "increases", "remains the same", "becomes zero"], 0],
+    ["If 'a' is the aperture of telescope and 'λ' is the wavelength of light then resolving power of telescope is <span class=\"tag\">July '16</span>", ["1.22 a / λ", "1.22 λ / a", "a / 1.22 λ", "λ / 1.22 a"], 2],
+    ["Using monochromatic light of wavelength λ in Young's double slit experiment, the eleventh dark fringe is obtained on the screen for a phase difference of <span class=\"tag\">July '17</span>", ["[11 / 2] π rad", "[21 / 2] π rad", "13 π rad", "21 π rad"], 1],
+    ["In interference pattern, using two coherent sources of light; the fringe width is <span class=\"tag\">Mar '18</span>", ["directly proportional to wavelength.", "inversely proportional to square of the wavelength.", "inversely proportional to wavelength.", "directly proportional to square of the wavelength."], 0],
+    ["Glass plate of refractive index 1.732 is to be used as a polariser, its polarising angle is <span class=\"tag\">Mar '18</span>", ["30°", "45°", "60°", "90°"], 2],
+    ["The condition for destructive interference between two waves is that their phase difference should be <span class=\"tag\">July '18</span>", ["0, π, 2π, .....", "0, 2π, 4π, .....", "π, 3π, 5π, .....", "π/2, 3π/2, 5π/2, ....."], 2],
+    ["When a ray of light enters into water from air, <span class=\"tag\">July '18</span>", ["its wavelength decreases", "its wavelength increases", "its frequency increases", "its frequency decreases"], 0],
+    ["A diffraction pattern is obtained by making blue light incident on a narrow slit. If blue light is replaced by red light, then the diffraction bands <span class=\"tag\">Feb '20</span>", ["disappear", "become broader", "become narrower", "remain same"], 1],
+    ["In Young's double slit experiment the two coherent sources have different amplitudes. If the ratio of maximum intensity to minimum intensity is 16:1, then the ratio of amplitudes of the two source will be <span class=\"tag\">Mar '22</span>", ["4:1", "5:3", "1:4", "1:16"], 1],
+    ["What changes are observed in a diffraction pattern if the whole apparatus is immersed in water? <span class=\"tag\">July '22</span>", ["the wavelength of light increases", "width of central maximum increases", "width of central maximum decreases", "frequency of light decreases"], 2],
+    ["The property of light which remains unchanged when it travels from one medium to another is <span class=\"tag\">Mar '22, Feb '23</span>", ["velocity", "wavelength", "amplitude", "frequency"], 3],
+    ["Which of the following phenomenon proves that light is a transverse wave <span class=\"tag\">July '23</span>", ["Reflection", "Interference", "Diffraction", "Polarization"], 3],
+    ["In biprism experiment, the distance of 20th bright band from the central bright band is 1.2 cm. Without changing the experimental set-up, the distance of 30th bright band from the central bright band will be <span class=\"tag\">Feb '24</span>", ["0.6 cm", "0.8 cm", "1.2 cm", "1.8 cm"], 3],
+    ["How many times the intensity of an unpolarized light wave reduces after passing through a polarizer? <span class=\"tag\">June '25</span>", ["1/2", "1/4", "1/6", "1/8"], 0]
+  ]],
+  ["08. Electrostatics", [
+    ["Condenser is a device used to store <span class=\"tag\">Oct '08</span>", ["large potential at low charge", "large charge at high potential", "large charge at low potential", "less charge at high potential."], 2],
+    ["Two condensers each of capacity 4 μF are connected in series and third condenser of capacity 4 μF is connected in parallel with the combination. Then equivalent capacitance of the arrangement is <span class=\"tag\">Mar '09</span>", ["12 μF", "8 μF", "6 μF", "2.65 μF"], 2],
+    ["In the following figure, charge on 4 μF capacitor is <span class=\"tag\">Mar '10</span>", ["40 μC", "100 μC", "200 μC", "250 μC"], 2],
+    ["Intensity of electric field at a point close and outside a charged conducting cylinder is proportional to (r is the distance of a point from the axis of cylinder) <span class=\"tag\">Mar '14</span>", ["1/r", "1/r²", "1/r³", "r²"], 0],
+    ["Electric field intensity in free space at a distance 'r' outside the charged conducting sphere of radius 'R' in terms of surface charge density 'σ' is <span class=\"tag\">Mar '15</span>", ["(σ/ε₀) (R/r)", "(σ/ε₀) (R²/r²)", "(σ/ε₀) (R/r²)", "(σ/ε₀) (R²/r)"], 1],
+    ["If the radius of a sphere is doubled without changing the charge on it, then electric flux originating from the sphere is <span class=\"tag\">Oct '15</span>", ["double", "half", "same", "zero"], 2],
+    ["Electric intensity due to a charged sphere at a point outside the sphere decreases with <span class=\"tag\">Mar '16</span>", ["increase in charge on sphere.", "increase in dielectric constant.", "decrease in the distance from the centre of sphere.", "Decrease in square of distance from the centre of sphere."], 1],
+    ["If the charge on the condenser of 10 μF is doubled, then the energy stored in it becomes <span class=\"tag\">Mar '17</span>", ["zero", "twice that of initial energy", "half the initial energy", "four times the initial energy"], 3],
+    ["Electric intensity outside a charged cylinder having the charge per unit length 'λ', at a distance r from its axis is <span class=\"tag\">Mar '18</span>", ["E = 2πε₀λ / kr²", "E = ε₀λ / 2πkr²", "E = λ / 2πε₀kr", "E = 4πε₀λ / kr²"], 2],
+    ["The electric field intensity outside the charged conducting sphere of radius 'R', placed in a medium of permittivity ε at a distance 'r' from the centre of the sphere in terms of surface charge density σ is <span class=\"tag\">Mar '19</span>", ["(σ/ε) (R/r)²", "(σ/ε) (r/R)", "(σ/ε) (R²/r)", "(σ/ε) (r/R)²"], 0],
+    ["The angle at which maximum torque is exerted by the external uniform electric field on the electric dipole is <span class=\"tag\">Mar '22</span>", ["0°", "30°", "45°", "90°"], 3],
+    ["The work done in bringing a unit positive charge from infinity to a given point against the direction of electric field is known as <span class=\"tag\">Feb '24</span>", ["electric flux", "magnetic potential", "electric potential", "gravitational potential"], 2],
+    ["Electric potential 'V' at a distance 'r' from a point charge is directly proportional to <span class=\"tag\">Feb '25</span>", ["r", "r²", "1/r", "1/r²"], 2]
+  ]],
+  ["09. Current Electricity", [
+    ["In order to convert a moving coil galvanometer into a voltmeter <span class=\"tag\">Oct '08</span>", ["a high resistance is connected in parallel with the galvanometer", "a high resistance is connected in series with the galvanometer", "a low resistance is connected in parallel with the galvanometer", "a low resistance is connected in series with the galvanometer."], 1],
+    ["Kirchhoff's first law is the consequence of Law of Conservation of <span class=\"tag\">Mar '09</span>", ["mass", "energy", "charge", "momentum"], 2],
+    ["A moving coil galvanometer of resistance 'G' gives full scale deflection for certain current. The shunt resistance required to convert it to measure a current 'n' times of initial current is <span class=\"tag\">Oct '09</span>", ["(n - 1) G", "G / (n - 1)", "(n - 1) / G", "nG"], 1],
+    ["The resistance of galvanometer is G. If S is the resistance used to convert the galvanometer into an ammeter, then the effective resistance of the ammeter is <span class=\"tag\">Mar '10</span>", ["G + S", "G - S", "(G + S) / (G - S)", "G S / (G + S)"], 3],
+    ["Kirchhoff's junction law is equivalent to <span class=\"tag\">Mar '13</span>", ["conservation of energy", "conservation of charge", "conservation of electric potential", "conservation of electric flux"], 1],
+    ["Accuracy of potentiometer can be easily increased by <span class=\"tag\">Mar '14</span>", ["increasing resistance of wire", "decreasing resistance of wire", "increasing the length of wire", "decreasing the length of wire"], 2],
+    ["An ideal voltmeter has <span class=\"tag\">Mar '14</span>", ["low resistance", "high resistance", "infinite resistance", "zero resistance"], 2],
+    ["Kirchhoff's voltage law and current law are respectively in accordance with the conservation of <span class=\"tag\">Oct '14</span>", ["charge and momentum", "charge and energy", "energy and charge", "energy and momentum"], 2],
+    ["Instrument which can measure terminal potential difference as well as electro motive force (e.m.f.) is <span class=\"tag\">Mar '15</span>", ["Wheatstone's metrebridge.", "Voltmeter.", "Potentiometer.", "Galvanometer."], 2],
+    ["In potentiometer experiment, if l₁ is the balancing length for e.m.f. of cell of internal resistance r and l₂ is the balancing length for its terminal potential difference when shunted with resistance R then: <span class=\"tag\">Mar '16</span>", ["l₁ = l₂ [(R + r) / R]", "l₁ = l₂ [R / (R + r)]", "l₁ = l₂ [R / (R - r)]", "l₁ = l₂ [(R - r) / R]"], 0],
+    ["The fraction of the total current passing through the galvanometer is <span class=\"tag\">July '16</span>", ["S / (S + G)", "G / (S + G)", "(S + G) / G", "(S + G) / S"], 0],
+    ["When unknown resistance is determined by metrebridge, the error due to contact resistance is minimized <span class=\"tag\">July '17</span>", ["by connecting both the resistances only in one gap.", "by interchanging the positions of known and unknown resistance.", "by using uniform wire.", "by obtaining the null point near the ends of the wire."], 1],
+    ["S.I. unit of potential gradient is <span class=\"tag\">Oct '08, Mar '18</span>", ["V cm", "V/cm", "V m", "V/m"], 3],
+    ["An ideal ammeter has <span class=\"tag\">July '18</span>", ["low resistance", "high resistance", "infinite resistance", "zero resistance"], 3],
+    ["If the length of a potentiometer wire is increased by keeping constant potential difference across the wire, then <span class=\"tag\">Feb '20</span>", ["null point is obtained at larger distance", "there is no change in the null point", "potential gradient is increased", "null point is obtained at shorter distance"], 0],
+    ["In potentiometer experiment, the cell balances at a length of 240 cm. When the cell is shunted by a resistance of 2 Ω, the balancing length becomes 120 cm. The internal resistance of the cell is <span class=\"tag\">July '22</span>", ["4 Ω", "2 Ω", "1 Ω", "0.5 Ω"], 1],
+    ["To convert a moving coil galvanometer into an ammeter we need to connect a <span class=\"tag\">Feb '24</span>", ["small resistance in parallel with it", "large resistance in series with it", "small resistance in series with it", "large resistance in parallel with it"], 0],
+    ["Which of the following equations gives correct expression for the internal resistance of a cell by using potentiometer? <span class=\"tag\">Feb '25</span>", ["r = R (V/E - 1)", "r = R (1 - E/V)", "r = R (1 - V/E)", "r = R (E/V - 1)"], 3],
+    ["Kirchhoff's Voltage Law applied to a loop deals with the conservation of <span class=\"tag\">June '25</span>", ["momentum", "mass", "energy", "charge"], 2]
+  ]],
+  ["10. Magnetic Fields due to Electric Current", [
+    ["Speed of an electron passing undeviated through a region of cross electric and magnetic field of magnitude 4 × 10⁵ V/m and 0.02 Wb/m² respectively in metre per second is <span class=\"tag\">Mar '08</span>", ["2 × 10⁶", "8 × 10⁶", "2 × 10⁷", "8 × 10⁷"], 2],
+    ["If 'R' is the radius of dees and 'B' be the magnetic field of induction in which positive charge (q) of mass (m) escapes from the cyclotron, then its maximum speed (v_max) is <span class=\"tag\">Oct '13</span>", ["qR / Bm", "qm / BR", "qBR / m", "m / qBR"], 2],
+    ["A solenoid of 1.5 m length and 4.0 cm in diameter possess 10 turns per metre. A current of 5 A is flowing through it. The magnetic induction at a point inside the solenoid along the axis is (μ₀ = 4π × 10⁻⁷ Wb/Am) <span class=\"tag\">Oct '14</span>", ["π × 10⁻⁵ T", "2π × 10⁻⁵ T", "3π × 10⁻⁵ T", "4π × 10⁻⁵ T"], 1],
+    ["Which one of the following particles cannot be accelerated by a cyclotron? <span class=\"tag\">Oct '15</span>", ["Electrons", "Protons", "Deuterons", "α-particles"], 0],
+    ["Cyclotron can not accelerate _____. <span class=\"tag\">July '17</span>", ["protons", "neutrons", "α-particles", "deuterons"], 1],
+    ["The unit Wbm⁻² is equal to <span class=\"tag\">Mar '22</span>", ["henry", "watt", "dyne", "tesla"], 3],
+    ["The magnitude of the magnetic field at the centre of a circular current carrying coil varies <span class=\"tag\">July '22</span>", ["inversely with the square of the radius of the coil", "directly with the radius of the coil", "inversely with the radius of the coil", "directly with the square of the radius of the coil"], 2],
+    ["If a current of 1 A flows through a solenoid of length 25 cm and made up of 250 turns of copper wire then the magnitude of magnetic induction inside the solenoid will be _____. <span class=\"tag\">July '23</span>", ["0.12568 × 10⁻³ T", "1.2568 × 10⁻³ T", "1.2568 × 10² T", "1.2568 × 10⁴ T"], 1],
+    ["Cyclotron is used to accelerate _____ <span class=\"tag\">July '24</span>", ["neutral particles", "negatively charged particles", "positively charged particles", "all types of particles"], 2],
+    ["The unit henry is equal to _____ <span class=\"tag\">July '24</span>", ["watt", "ohm-second", "dyne", "Wb/m²"], 1],
+    ["In a cyclotron final kinetic energy of a particle revolving in a circular path of radius 'R_exit' is: <span class=\"tag\">June '25</span>", ["K.E. ∝ R_exit", "K.E. ∝ R_exit²", "K.E. ∝ 1 / R_exit", "K.E. ∝ 1 / R_exit²"], 1]
+  ]],
+  ["11. Magnetic Materials", [
+    ["If a watch-glass containing a small quantity of water is placed on two dissimilar magnetic poles, then water <span class=\"tag\">Mar '17</span>", ["shows a depression in the middle.", "shows an elevation in the middle.", "surface remains horizontal.", "evaporates immediately."], 1],
+    ["Soft iron is used to make the core of transformer because of its <span class=\"tag\">Feb '23</span>", ["low coercivity and low retentivity", "low coercivity and high retentivity", "high coercivity and high retentivity", "high coercivity and low retentivity"], 1],
+    ["The gyromagnetic ratio of electron is <span class=\"tag\">June '25</span>", ["2m_e / e", "2m_e / e²", "e / 2m_e", "e² / 2m_e"], 2],
+    ["A bar magnet of magnetic moment 10 Am² has a cross-sectional area of 2.5 × 10⁻⁴ m². If the intensity of magnetisation of magnet is 10⁵ A/m, the length of the bar magnet is _____ <span class=\"tag\">Feb '26</span>", ["2 cm", "4 cm", "6 cm", "8 cm"], 1]
+  ]],
+  ["12. Electromagnetic Induction", [
+    ["Henry is equivalent to ________ <span class=\"tag\">Mar '08</span>", ["ampere / second", "ampere second", "ohm / second", "ohm second"], 3],
+    ["A transformer converts 240 V AC to 60 V AC. The secondary has 75 turns. The number of turns in primary are ________ <span class=\"tag\">Oct '13</span>", ["600", "500", "400", "300"], 3],
+    ["A metre gauge train is heading north with speed 54 km/hr in earth's magnetic field 3 × 10⁻⁴ T. The e.m.f. induced across the axle joining the wheels is ________ <span class=\"tag\">July '16</span>", ["0.45 mV", "4.5 mV", "45 mV", "450 mV"], 1],
+    ["In a step-up transformer, ratio of the turns is ________ <span class=\"tag\">July '19</span>", ["greater than 1", "less than 1", "equal to 1", "never equal to 1"], 0],
+    ["If a coil of metal wire is kept stationary in a uniform magnetic field, then ________ <span class=\"tag\">Feb '20</span>", ["an e.m.f. is induced in the coil", "a current is induced in the coil", "neither e.m.f. nor current is induced", "both current and e.m.f. are induced"], 2],
+    ["A small piece of metal wire is dragged across the gap between the pole pieces of magnet in 0.5 second. The magnetic flux between the pole pieces is 8 × 10⁻⁴ weber. The emf induced in the wire is ________ <span class=\"tag\">July '22</span>", ["1.6 millivolt", "16 millivolt", "1.6 volt", "16 volt"], 0],
+    ["If a circular coil of 100 turns with a cross-sectional area of 1 m² is kept with its plane perpendicular to the magnetic field of 1 T, the magnetic flux linked with the coil will be ________ <span class=\"tag\">Feb '23</span>", ["1 Wb", "50 Wb", "100 Wb", "200 Wb"], 2],
+    ["Magnitude of induced e.m.f. produced between the ends of a conductor of length 'L/2' moving with a uniform velocity 'v' at right angles to a uniform magnetic field of intensity '2B' will be ________ <span class=\"tag\">July '23</span>", ["BLv / 4", "BLv / 2", "BLv", "2BLv"], 2],
+    ["The current in a coil changes from 50 A to 10 A in 0.1 second. The self inductance of the coil is 20 H. The induced e.m.f. in the coil is ________ <span class=\"tag\">Feb '24</span>", ["800 V", "6000 V", "7000 V", "8000 V"], 3],
+    ["A transformer increases an alternating e.m.f. from 220 V to 880 V. If primary coil has 1000 turns, the number of turns in the secondary coil are ________ <span class=\"tag\">Feb '25</span>", ["1000", "2000", "3000", "4000"], 3],
+    ["A conducting rod of length l, rotates about one of its ends in a uniform magnetic field B, with a constant angular velocity ω. If the plane of rotation is perpendicular to B, the e.m.f. induced between the ends of rod is ________ <span class=\"tag\">Feb '26</span>", ["(1/2) B ω l²", "B ω l²", "2 B ω l²", "B ω l"], 0]
+  ]],
+  ["13. AC Circuits", [
+    ["In the purely resistive A.C. circuit <span class=\"tag\">Oct '08</span>", ["current leads e.m.f. by a phase angle of π radians.", "current leads e.m.f. by a phase angle of π/2 radians.", "current and e.m.f. are in phase", "current lags behind e.m.f. by a phase angle of π/2 radians."], 2],
+    ["In LCR series circuit, at resonance, the power factor is <span class=\"tag\">Mar '09, Oct '09</span>", ["Zero", "0.5", "1", "∞"], 2],
+    ["In series LCR circuit, at resonance, the applied e.m.f. and the current are <span class=\"tag\">Oct '09</span>", ["out of phase", "in phase", "differ in phase by π/2 radian", "differ in phase by π/4 radian"], 1],
+    ["A current in A.C. circuit lags behind the applied emf by 90°. The circuit contains ________ <span class=\"tag\">Mar '11</span>", ["only resistance", "only capacitance", "resistance and capacitance", "only inductance"], 3],
+    ["Reactance of a coil is 157 Ω. On connecting the coil across a source of frequency 100 Hz, the current lags behind e.m.f. by 45°. The inductance of the coil is ________ <span class=\"tag\">Mar '13</span>", ["0.25 H", "0.5 H", "4 H", "314 H"], 0],
+    ["If A.C. voltage is applied to a pure capacitor, then voltage across the capacitor ________ <span class=\"tag\">Mar '17</span>", ["leads the current by phase angle (π/2) rad.", "leads the current by phase angle (π) rad.", "lags behind the current by phase angle (π/2) rad.", "lags behind the current by phase angle (π) rad."], 2],
+    ["In series LCR circuit at resonance, phase difference between current and e.m.f. of source is ________ <span class=\"tag\">July '17</span>", ["π rad", "(π/2) rad", "(π/4) rad", "zero rad"], 3],
+    ["In series LCR circuit R = 3 Ω, X_L = 8 Ω, X_C = 4 Ω, the impedance of the circuit is: <span class=\"tag\">July '18</span>", ["3 Ω", "7 Ω", "5 Ω", "25 Ω"], 2],
+    ["The average value of alternating current over a full cycle is always (I₀ = Peak value of current) <span class=\"tag\">Mar '22</span>", ["zero", "(1/2) I₀", "I₀ / √2", "2 I₀"], 0],
+    ["In a series LCR circuit the phase difference between the voltage and the current is 45°. Then the power factor will be ________ <span class=\"tag\">July '24</span>", ["0.6071", "0.7071", "0.8081", "1.0"], 1],
+    ["In series LCR circuit for X_L > X_C, tan φ will be ________ <span class=\"tag\">Feb '26</span>", ["negative", "zero", "positive", "infinity"], 2]
+  ]],
+  ["14. Dual Nature of Radiation and Matter", [
+    ["The de Broglie wavelength of 1 mg grain of sand blown by a wind at the speed of 20 m/s is (h = 6.63 × 10⁻³⁴ S.I. Unit) <span class=\"tag\">Mar '08</span>", ["33.15 × 10⁻³¹ m", "33.15 × 10⁻³⁰ m", "33.15 × 10⁻³⁶ m", "33.15 × 10⁻³⁵ m"], 1],
+    ["The photoelectric threshold wavelength of certain metal is 331.5 Å. Then its work function is <span class=\"tag\">Oct '09</span>", ["6 × 10⁻¹⁹ J", "7.286 × 10⁻¹⁹ J", "9 × 10⁻¹⁹ J", "9.945 × 10⁻¹⁹ J"], 0],
+    ["Let 'p' and 'E' denote the linear momentum and energy of emitted photon respectively. If the wavelength of incident radiation is increased <span class=\"tag\">Mar '13</span>", ["both p and E increase.", "p increases and E decreases.", "p decreases and E increases.", "both p and E decrease."], 3],
+    ["The number of photoelectrons emitted <span class=\"tag\">Oct '13</span>", ["varies inversely with frequency", "varies directly with frequency", "varies inversely with intensity", "varies directly with intensity"], 3],
+    ["When radiations of wavelength λ₁ and λ₂ are incident on certain photosensitive material, the energies of electron ejected are E₁ and E₂ respectively, such that E₁ > E₂. Then Planck's constant 'h' is (c = velocity of light) <span class=\"tag\">Oct '14</span>", ["(E₁ - E₂) (λ₁ - λ₂) / c(λ₂ - λ₁)", "(E₁ - E₂) λ₁λ₂ / c(λ₂ - λ₁)", "(E₁ - E₂) (λ₁λ₂)", "(E₁ - E₂) / c(λ₂ - λ₁)"], 1],
+    ["The momentum of a photon of de Broglie wavelength 5000 Å is [Planck's constant = 6.63 × 10⁻³⁴ J.s] <span class=\"tag\">Oct '15</span>", ["1.326 × 10⁻²⁷ kg-m/s", "1.326 × 10⁻²⁸ kg-m/s", "7.54 × 10⁻²⁸ kg-m/s", "7.54 × 10⁻²⁷ kg-m/s"], 0],
+    ["The energy of photon of wavelength λ is [h = Planck's constant, c = speed of light in vacuum] <span class=\"tag\">Mar '16</span>", ["hcλ", "hλ / c", "hc / λ", "λ / hc"], 2],
+    ["The kinetic energy of emitted photoelectrons is independent of <span class=\"tag\">July '16</span>", ["frequency of incident radiation.", "intensity of incident radiation.", "wavelength of incident radiation.", "collector plate potential."], 1],
+    ["In a photon-electron collision <span class=\"tag\">Mar '17</span>", ["only total energy is conserved.", "only total momentum is conserved.", "both total energy and total momentum are conserved.", "both total momentum and total energy are not conserved."], 2],
+    ["The momentum associated with photon is given by <span class=\"tag\">Mar '18</span>", ["hν", "hν / c", "hE", "hλ"], 1],
+    ["In a photocell, increasing the intensity of incident light increases <span class=\"tag\">July '18</span>", ["the stopping potential", "the photoelectric current", "the energy of the incident photons", "maximum kinetic energy of the photo-electron"], 1],
+    ["An electron of energy 150 eV has wavelength of 10⁻¹⁰ m. The wavelength of a 0.60 keV electron is <span class=\"tag\">Mar '19</span>", ["0.50 Å", "0.75 Å", "1.2 Å", "1.5 Å"], 0],
+    ["If the maximum kinetic energy of emitted electrons in photoelectric effect is 2 eV, the stopping potential will be <span class=\"tag\">Feb '23</span>", ["0.5 V", "1.0 V", "1.5 V", "2.0 V"], 3],
+    ["If the frequency of incident light falling on a photosensitive material is doubled, then the kinetic energy of the emitted photoelectron will be <span class=\"tag\">Mar '15, Feb '24</span>", ["same as its initial value.", "two times its initial value.", "more than two times its initial value.", "less than two times its initial value."], 2],
+    ["An electron, a proton, an α-particle and a hydrogen atom are moving with the same kinetic energy. The associated de Broglie wavelength will be the longest for <span class=\"tag\">July '24, Feb '25</span>", ["electron", "proton", "α-particle", "hydrogen atom"], 0],
+    ["For which of the following metals, photoelectric effect is possible for visible radiation? <span class=\"tag\">June '25</span>", ["Zinc", "Cadmium", "Magnesium", "Sodium"], 3],
+    ["The wavelength and power of the incident light is 4000 Å and 0.1 W respectively. The number of incident photons is _____ <span class=\"tag\">June '25</span>", ["2.011 × 10¹⁷", "3.011 × 10¹⁷", "4.011 × 10¹⁷", "5.011 × 10¹⁷"], 0],
+    ["If the frequency of incident radiation is increased above threshold frequency, keeping intensity and potential constant then the photoelectric current <span class=\"tag\">Feb '26</span>", ["decreases", "becomes zero", "remains same", "increases"], 2],
+    ["A metal surface is illuminated by photons of energy 5 eV and 2.5 eV respectively. The ratio of their wavelengths of emitted radiation is <span class=\"tag\">Feb '26</span>", ["1:4", "1:2", "2:1", "4:1"], 1]
+  ]],
+  ["15. Structure of Atoms and Nuclei", [
+    ["Which of the following quantities has same units and dimensions as that of plank's constant? <span class=\"tag\">Mar '09</span>", ["Moment of inertia", "Angular momentum", "Linear momentum", "Rate of change of linear momentum"], 1],
+    ["The energy of an electron in nth Bohr orbit is proportional to <span class=\"tag\">Oct '09</span>", ["n²", "n", "1/n", "1/n²"], 3],
+    ["The radius of first Bohr orbit is 0.53 A.U. and radius of nᵗʰ Bohr orbit is 212 A.U. The value of 'n' is <span class=\"tag\">Mar '10</span>", ["2", "12", "20", "400"], 2],
+    ["The nuclei having same number of protons but different number of neutrons are called <span class=\"tag\">Mar '13</span>", ["isobars", "α - particles", "isotopes", "γ - particles"], 2],
+    ["When electron in hydrogen atom jumps from second orbit to first orbit, the wavelength of radiation emitted is λ. When electron jumps from third orbit to first orbit, the wavelength of emitted radiation would be <span class=\"tag\">Mar '14</span>", ["27/32 λ", "32/27 λ", "2/3 λ", "3/2 λ"], 0],
+    ["Linear momentum of an electron in Bohr orbit of H-atom (principal quantum number n) is proportional to <span class=\"tag\">Mar '15</span>", ["1/n²", "1/n", "n", "n²"], 1],
+    ["The ratio of kinetic energy of an electron in Bohr's orbit to its total energy in the same orbit is <span class=\"tag\">July '17</span>", ["1", "-1", "2", "-0.5"], 1],
+    ["In hydrogen atom, electron jumps from the 3rd orbit to the 1st orbit. The change in angular momentum is <span class=\"tag\">Feb '20</span>", ["1", "2", "3", "0.5"], 0],
+    ["Balmer series is obtained when all transitions of electron terminate on _____ <span class=\"tag\">July '16, '22</span>", ["1st orbit", "2nd orbit", "3rd orbit", "4th orbit"], 1],
+    ["The radius of eighth orbit of electron in H-atom will be more than that of fourth orbit by a factor of <span class=\"tag\">Feb '23</span>", ["2", "4", "8", "16"], 1],
+    ["Atoms having the same number of protons but different number of neutrons are called _____ <span class=\"tag\">July '24</span>", ["isotopes", "isobars", "isotones", "isomers"], 0]
+  ]],
+  ["16. Semiconductor Devices", [
+    ["A pure semiconductor is known as <span class=\"tag\">Mar '08</span>", ["extrinsic semiconductor", "intrinsic semiconductor", "p-type semiconductor", "n-type semiconductor"], 1],
+    ["In a semiconductor, acceptor impurity is place due to <span class=\"tag\">Oct '08</span>", ["antimony", "indium", "phosphorus", "arsenic"], 1],
+    ["Avalanche breakdown in a zener diode takes place due to <span class=\"tag\">Mar '09</span>", ["thermal energy", "light energy", "magnetic field", "accelerated minority charge carrier"], 3],
+    ["Which logic gate corresponds to the logical equation, Y = A + B? <span class=\"tag\">Mar '10</span>", ["AND", "NOR", "NAND", "OR"], 3],
+    ["Colour of light emitted by LED depends upon <span class=\"tag\">Oct '14</span>", ["its forward bias", "its reverse bias", "the band gap of the material of semiconductor", "its size"], 2],
+    ["The output of NOR gate is high, when <span class=\"tag\">Oct '15</span>", ["all inputs are high", "all inputs are low", "only one of its inputs is high", "only one of its inputs is low"], 1],
+    ["Which logic gate corresponds to the truth table given below?<br>A=0, B=0, Y=1 | A=0, B=1, Y=0 | A=1, B=0, Y=0 | A=1, B=1, Y=0 <span class=\"tag\">Mar '16</span>", ["AND", "NOR", "OR", "NAND"], 1],
+    ["When a p-n-p transistor is operated in saturation region, then its <span class=\"tag\">Mar '17</span>", ["base-emitter junction is forward biased and base-collector junction is reverse biased.", "both base-emitter and base-collector junctions are reverse biased.", "both base-emitter and base-collector junctions are forward biased.", "base-emitter junction is reverse biased and base-collector junction is forward biased."], 2],
+    ["The logic gate which produces LOW output when one of the input is HIGH and produces HIGH output only when all of its inputs are LOW is called <span class=\"tag\">July '17</span>", ["AND gate", "OR gate", "NOR gate", "NAND gate"], 2],
+    ["Y = A + B is the Boolean expression for <span class=\"tag\">July '18, Feb '23</span>", ["OR - gate", "AND - gate", "NOR - gate", "NAND - gate"], 0],
+    ["Solar cell operates on the principle of <span class=\"tag\">July '23</span>", ["diffusion", "recombination", "photovoltaic action", "photoelectric effect"], 2],
+    ["The LED emits visible light when its <span class=\"tag\">Feb '23, July '24</span>", ["junction is reverse biased", "depletion region widens", "holes and electrons recombine", "junction becomes hot"], 2],
+    ["The gate which produces high output, when is both inputs are high is- <span class=\"tag\">Feb '25</span>", ["X-OR gate", "AND gate", "NAND gate", "NOR gate"], 1]
+  ]]
+];
+
+var L = "ABCD";
+var app = document.getElementById("app");
+var chSel = document.getElementById("chSel");
+var allBtn = document.getElementById("all");
+var secs = [];
+
+function getActiveData() {
+  return DATA;
+}
+
+function loadMcqMode() {
+  var data = getActiveData();
+  app.innerHTML = "";
+  chSel.innerHTML = '<option value="all">All Chapters</option>';
+  secs = [];
+
+  data.forEach(function(c, idx) {
+    var opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = c[0];
+    chSel.appendChild(opt);
+
+    var s = document.createElement("section");
+    s.dataset.idx = idx;
+    
+    var h = "<h2>" + c[0] + "</h2>";
+    c[1].forEach(function(r, i) {
+      h += '<div class="q"><b>Q' + (i + 1) + '.</b> ' + r[0];
+      r[1].forEach(function(o, j) {
+        h += '<div class="o' + (j === r[2] ? " c" : "") + '">(' + L[j] + ') ' + o + '</div>';
+      });
+      h += '</div>';
+    });
+    
+    h += '<button class="sm">Show answers</button>';
+    
+    s.innerHTML = h;
+    app.appendChild(s);
+    secs.push(s);
+
+    var b = s.querySelector("button");
+    b.onclick = function() {
+      s.classList.toggle("show");
+      b.textContent = s.classList.contains("show") ? "Hide answers" : "Show answers";
+      syncAllBtn();
+    };
+  });
+
+  filterChapters();
+}
+
+function filterChapters() {
+  var val = chSel.value;
+  secs.forEach(function(s) {
+    if (val === "all" || s.dataset.idx === val) {
+      s.style.display = "block";
+    } else {
+      s.style.display = "none";
+    }
+  });
+  syncAllBtn();
+}
+
+chSel.onchange = function() {
+  filterChapters();
+};
+
+function syncAllBtn() {
+  var visibleSecs = secs.filter(function(s) { return s.style.display !== "none"; });
+  var shownSecs = visibleSecs.filter(function(s) { return s.classList.contains("show"); });
+  allBtn.textContent = (shownSecs.length === visibleSecs.length && visibleSecs.length > 0) ? "Hide all answers" : "Show all answers";
+}
+
+allBtn.onclick = function() {
+  var visibleSecs = secs.filter(function(s) { return s.style.display !== "none"; });
+  var shouldShow = visibleSecs.some(function(s) { return !s.classList.contains("show"); });
+  
+  visibleSecs.forEach(function(s) {
+    s.classList.toggle("show", shouldShow);
+    s.querySelector("button").textContent = shouldShow ? "Hide answers" : "Show answers";
+  });
+  syncAllBtn();
+};
+
+loadMcqMode();
+</script>
+
+</body>
+</html>
